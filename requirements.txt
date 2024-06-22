@@ -1,4 +1,5 @@
-transformers==4.14.2
-torch==1.10.0
-openai==0.10.4
-python-dotenv==0.19.5
+transformers==4.15.0
+torch>=1.8.0
+openai
+nltk==3.6.5
+python-dotenv==1.0.1
