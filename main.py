@@ -92,7 +92,6 @@ def generate_humanized_text(text, model_name="t5-base"):
         print(f"Error generating humanized text: {e}")
         return None
 
-
 if __name__ == "__main__":
     input_file = 'AI_text_rewriting/input.txt'
     output_file = 'AI_text_rewriting/output.txt'
@@ -112,10 +111,6 @@ if __name__ == "__main__":
             save_output(output_file, humanized_text)
             print(f"Output saved to {output_file}")
         else:
-            print("Processing failed.")
-    else:
-        print(f"No input text found in {input_file}.")
-  else:
             print("Processing failed.")
     else:
         print(f"No input text found in {input_file}.")
