@@ -36,8 +36,8 @@ def generate_humanized_text(text, model_name="t5-base"):
             top_p=0.9,  # Nucleus sampling
             repetition_penalty=2.5,
             no_repeat_ngram_size=2,  # Размер n-грамм, которые не должны повторяться
-            length_penalty=1.0,  # Пенальти за длину
-            do_sample=True,  # Использование сэмплирования
+            length_penalty=1.0,
+            do_sample=True,
             num_beams=10,
         )
 
