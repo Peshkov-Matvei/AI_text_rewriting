@@ -1,5 +1,8 @@
 transformers==4.15.0
 torch>=1.8.0
-openai
 nltk==3.6.5
 python-dotenv==1.0.1
+Flask==2.0.2
+langid==1.1.6
+stanza==1.3.1
+pymorphy2==0.9.1
