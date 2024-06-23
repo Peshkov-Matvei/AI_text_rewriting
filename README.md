@@ -12,7 +12,7 @@
  - nltk
  - stanza
  - python-dotenv
- - lanfid
+ - langid
  - HTML
  - Flask
 
