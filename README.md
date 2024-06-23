@@ -7,6 +7,8 @@
 
  - Python       
  - Transformers(T5)
+ - Цепи Маркова
+ - Char-GPT 4о
  - nltk
  - stanza
  - python-dotenv
