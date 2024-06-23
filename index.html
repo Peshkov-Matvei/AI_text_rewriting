@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model App</title>
+</head>
+<body>
+    <h1>ML Model Text Processor</h1>
+    
+    <label for="inputText">Input Text:</label>
+    <input type="text" id="inputText" name="inputText">
+    
+    <button onclick="processText()">Process</button>
+    
+    <h2>Output:</h2>
+    <p id="outputText"></p>
+    
+    <script>
+        async function processText() {
+            const inputText = document.getElementById('inputText').value;
+            
+            // Отправляем текст на сервер
+            const response = await fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: inputText })
+            });
+            
+            // Получаем результат обработки
+            const result = await response.json();
+            document.getElementById('outputText').innerText = result.output;
+        }
+    </script>
+</body>
+</html>
