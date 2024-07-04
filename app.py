@@ -12,14 +12,11 @@ def process_text():
     data = request.get_json()
     input_text = data['text']
     
-    # Записываем текст в input.txt
     with open('input.txt', 'w') as f:
         f.write(input_text)
     
-    # Запускаем main.py
     subprocess.run(['python', 'main.py'])
     
-    # Читаем результат из output.txt
     with open('output.txt', 'r') as f:
         output_text = f.read()
     
