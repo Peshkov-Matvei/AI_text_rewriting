@@ -13,10 +13,8 @@ import pymorphy2
 
 morph = pymorphy2.MorphAnalyzer()
 
-# Загрузка переменных окружения из файла .env
 load_dotenv()
 
-# Инициализация Stanza
 stanza.download('en')
 nlp_en = stanza.Pipeline('en', processors='tokenize,mwt,pos,lemma,ner')
 
@@ -52,7 +50,7 @@ def lemmatize_text_russian(text):
     tokens = text.split()
     lemmatized_tokens = []
     for token in tokens:
-        parsed_token = morph.parse(token)[0]  # берем первый разбор, предполагая самый вероятный
+        parsed_token = morph.parse(token)[0]
         lemma = parsed_token.normal_form
         lemmatized_tokens.append(lemma)
     lemmatized_text = ' '.join(lemmatized_tokens)
@@ -159,8 +157,8 @@ def generate_humanized_text_ru(text, model_name="cointegrated/rut5-base-multitas
 
 
 if __name__ == "__main__":
-    input_file = '/content/drive/My Drive/AI_text_rewriting/input.txt'
-    output_file = '/content/drive/My Drive/AI_text_rewriting/output.txt'
+    input_file = 'AI_text_rewriting/input.txt'
+    output_file = 'AI_text_rewriting/output.txt'
 
     input_text = load_input(input_file)
 
